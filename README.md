@@ -1,1 +1,3 @@
-# ClaudeUp Profiles and other Config files
+# ClaudeUp Config
+
+Keep track of `claudeup` profiles and other config files.
