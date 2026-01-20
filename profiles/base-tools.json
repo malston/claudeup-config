@@ -1,0 +1,40 @@
+{
+  "name": "base-tools",
+  "description": "Base tools for everyday claude-ing",
+  "marketplaces": [
+    {
+      "source": "github",
+      "repo": "anthropics/claude-code"
+    },
+    {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    {
+      "source": "github",
+      "repo": "claudeup/claude-conductor"
+    },
+    {
+      "source": "github",
+      "repo": "mixedbread-ai/mgrep"
+    },
+    {
+      "source": "github",
+      "repo": "obra/superpowers-marketplace"
+    },
+    {
+      "source": "github",
+      "repo": "thedotmack/claude-mem"
+    },
+    {
+      "source": "github",
+      "repo": "wshobson/agents"
+    }
+  ],
+  "plugins": [
+    "conductor@claude-conductor",
+    "gopls-lsp@claude-plugins-official"
+  ],
+  "detect": {},
+  "sandbox": {}
+}

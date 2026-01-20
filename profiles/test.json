@@ -1,0 +1,19 @@
+{
+ "name": "test",
+  "description": "Test profile",
+  "marketplaces": [
+    {
+      "source": "github",
+      "repo": "obra/superpowers-marketplace"
+    }
+  ],
+  "plugins": [
+    "superpowers@superpowers-marketplace"
+  ],
+  "sandbox": {
+    "credentials": [
+      "git",
+      "ssh"
+    ]
+  }
+}

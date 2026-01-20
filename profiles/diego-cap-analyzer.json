@@ -1,0 +1,53 @@
+{
+  "description": "Plugins for the diego capacity analyzer project",
+  "marketplaces": [
+    {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    {
+      "source": "github",
+      "repo": "anthropics/skills"
+    },
+    {
+      "source": "github",
+      "repo": "obra/superpowers-marketplace"
+    },
+    {
+      "source": "github",
+      "repo": "thedotmack/claude-mem"
+    },
+    {
+      "source": "github",
+      "repo": "wshobson/agents"
+    }
+  ],
+  "plugins": [
+    "backend-api-security@claude-code-workflows",
+    "backend-development@claude-code-workflows",
+    "claude-mem@thedotmack",
+    "code-documentation@claude-code-workflows",
+    "code-refactoring@claude-code-workflows",
+    "code-review-ai@claude-code-workflows",
+    "codebase-cleanup@claude-code-workflows",
+    "commit-commands@claude-code-plugins",
+    "comprehensive-review@claude-code-workflows",
+    "debugging-toolkit@claude-code-workflows",
+    "dependency-management@claude-code-workflows",
+    "developer-essentials@claude-code-workflows",
+    "documentation-generation@claude-code-workflows",
+    "elements-of-style@superpowers-marketplace",
+    "error-debugging@claude-code-workflows",
+    "frontend-design@claude-plugins-official",
+    "full-stack-orchestration@claude-code-workflows",
+    "git-pr-workflows@claude-code-workflows",
+    "javascript-typescript@claude-code-workflows",
+    "performance-testing-review@claude-code-workflows",
+    "security-compliance@claude-code-workflows",
+    "security-scanning@claude-code-workflows",
+    "shell-scripting@claude-code-workflows",
+    "superpowers@superpowers-marketplace",
+    "tdd-workflows@claude-code-workflows",
+    "unit-testing@claude-code-workflows"
+  ]
+}
