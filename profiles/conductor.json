@@ -12,18 +12,27 @@
     },
     {
       "source": "github",
+      "repo": "claudeup/claude-conductor"
+    },
+    {
+      "source": "github",
+      "repo": "mixedbread-ai/mgrep"
+    },
+    {
+      "source": "github",
+      "repo": "obra/superpowers-marketplace"
+    },
+    {
+      "source": "github",
       "repo": "thedotmack/claude-mem"
     },
     {
       "source": "github",
-      "repo": "jarrodwatts/claude-hud"
+      "repo": "wshobson/agents"
     }
   ],
   "plugins": [
-    "claude-mem@thedotmack",
-    "commit-commands@claude-code-plugins",
-    "hookify@claude-code-plugins",
-    "claude-hud@claude-hud",
+    "conductor@claude-conductor",
     "gopls-lsp@claude-plugins-official"
   ],
   "detect": {},
