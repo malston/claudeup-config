@@ -12,19 +12,27 @@
     },
     {
       "source": "github",
-      "repo": "thedotmack/claude-mem"
+      "repo": "jarrodwatts/claude-hud"
     },
     {
       "source": "github",
-      "repo": "jarrodwatts/claude-hud"
+      "repo": "thedotmack/claude-mem"
     }
   ],
   "plugins": [
+    "claude-code-setup@claude-plugins-official",
+    "claude-hud@claude-hud",
+    "claude-md-management@claude-plugins-official",
     "claude-mem@thedotmack",
     "commit-commands@claude-code-plugins",
+    "gopls-lsp@claude-plugins-official",
+    "greptile@claude-plugins-official",
     "hookify@claude-code-plugins",
-    "claude-hud@claude-hud",
-    "gopls-lsp@claude-plugins-official"
+    "openapi@openapi-dev",
+    "pr-review-toolkit@claude-code-plugins",
+    "security-guidance@claude-code-plugins",
+    "superpowers@claude-plugins-official",
+    "vercel@claude-plugins-official"
   ],
   "detect": {},
   "sandbox": {}
