@@ -1,6 +1,6 @@
 {
-  "name": "base-tools",
-  "description": "Base tools for everyday claude-ing",
+  "name": "conductor",
+  "description": "Plugins for working on conductor",
   "marketplaces": [
     {
       "source": "github",
