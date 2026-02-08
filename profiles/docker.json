@@ -20,14 +20,6 @@
     },
     {
       "source": "github",
-      "repo": "ccplugins/awesome-claude-code-plugins"
-    },
-    {
-      "source": "git",
-      "url": "https://github.com/EveryInc/compound-engineering-plugin.git"
-    },
-    {
-      "source": "github",
       "repo": "anthropics/skills"
     },
     {

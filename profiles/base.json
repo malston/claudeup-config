@@ -1,0 +1,66 @@
+{
+  "name": "base",
+  "description": "base marketplaces and plugins",
+  "marketplaces": [
+    {
+      "source": "github",
+      "repo": "jarrodwatts/claude-hud"
+    },
+    {
+      "source": "github",
+      "repo": "pchalasani/claude-code-tools"
+    },
+    {
+      "source": "github",
+      "repo": "thedotmack/claude-mem"
+    }
+  ],
+  "detect": {},
+  "perScope": {
+    "user": {
+      "plugins": [
+        "claude-hud@claude-hud",
+        "claude-mem@thedotmack",
+        "safety-hooks@cctools-plugins"
+      ],
+      "mcpServers": [
+        {
+          "name": "context7",
+          "command": "npx",
+          "args": [
+            "-y",
+            "@upstash/context7-mcp",
+            "--api-key",
+            "ctx7sk-4718ff3c-b968-48b2-bce1-15211ca6e88f"
+          ],
+          "scope": "user"
+        }
+      ]
+    }
+  },
+  "localItems": {
+    "agents": [
+      "test-runner/test-runner.md"
+    ],
+    "commands": [
+      "commit.md",
+      "create-release.md",
+      "recovery-prompt.md",
+      "update-memory.md"
+    ],
+    "skills": [
+      "bash",
+      "pr-comments"
+    ],
+    "hooks": [
+      "block-dangerous-commands.sh",
+      "format-on-save.sh",
+      "log-bash-commands.sh",
+      "markdown_formatter.py",
+      "protect-sensitive-files.sh"
+    ],
+    "output-styles": [
+      "technical-evangelist.md"
+    ]
+  }
+}

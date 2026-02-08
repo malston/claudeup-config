@@ -1,6 +1,6 @@
 {
-  "name": "claudeup",
-  "description": "6 marketplaces",
+  "name": "multi-scope",
+  "description": "Profile with multiple scopes and marketplaces",
   "marketplaces": [
     {
       "source": "github",
@@ -36,24 +36,22 @@
         "claude-hud@claude-hud",
         "claude-md-management@claude-plugins-official",
         "claude-mem@thedotmack",
-        "code-review@claude-plugins-official",
         "commit-commands@claude-plugins-official",
+        "elements-of-style@superpowers-marketplace",
         "gopls-lsp@claude-plugins-official",
         "hookify@claude-plugins-official",
-        "pr-review-toolkit@claude-plugins-official",
-        "security-guidance@claude-plugins-official",
-        "superpowers@claude-plugins-official",
-        "swift-lsp@claude-plugins-official",
+        "superpowers@superpowers-marketplace",
         "vercel@claude-plugins-official"
       ]
     },
     "project": {
       "plugins": [
         "backend-development@claude-code-workflows",
-        "claude-mem@thedotmack",
         "code-documentation@claude-code-workflows",
-        "elements-of-style@superpowers-marketplace",
-        "superpowers@superpowers-marketplace",
+        "code-review@claude-plugins-official",
+        "openapi@openapi-dev",
+        "pr-review-toolkit@claude-plugins-official",
+        "security-guidance@claude-plugins-official",
         "tdd-workflows@claude-code-workflows",
         "unit-testing@claude-code-workflows"
       ]

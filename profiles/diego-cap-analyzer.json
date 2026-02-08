@@ -32,6 +32,7 @@
     "commit-commands@claude-code-plugins",
     "elements-of-style@superpowers-marketplace",
     "frontend-design@claude-plugins-official",
+    "gopls-lsp@claude-plugins-official",
     "javascript-typescript@claude-code-workflows",
     "superpowers@superpowers-marketplace",
     "tdd-workflows@claude-code-workflows",

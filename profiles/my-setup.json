@@ -16,7 +16,15 @@
     },
     {
       "source": "github",
+      "repo": "malston/openapi-docs-generator"
+    },
+    {
+      "source": "github",
       "repo": "obra/superpowers-marketplace"
+    },
+    {
+      "source": "github",
+      "repo": "pchalasani/claude-code-tools"
     },
     {
       "source": "github",
@@ -27,21 +35,73 @@
       "repo": "wshobson/agents"
     }
   ],
-  "plugins": [
-    "claude-code-setup@claude-plugins-official",
-    "claude-hud@claude-hud",
-    "claude-md-management@claude-plugins-official",
-    "claude-mem@thedotmack",
-    "code-review@claude-plugins-official",
-    "commit-commands@claude-plugins-official",
-    "gopls-lsp@claude-plugins-official",
-    "hookify@claude-plugins-official",
-    "pr-review-toolkit@claude-plugins-official",
-    "security-guidance@claude-plugins-official",
-    "superpowers@claude-plugins-official",
-    "swift-lsp@claude-plugins-official",
-    "vercel@claude-plugins-official"
-  ],
   "detect": {},
-  "sandbox": {}
+  "perScope": {
+    "user": {
+      "plugins": [
+        "claude-code-setup@claude-plugins-official",
+        "claude-hud@claude-hud",
+        "claude-md-management@claude-plugins-official",
+        "claude-mem@thedotmack",
+        "code-documentation@claude-code-workflows",
+        "code-review@claude-plugins-official",
+        "commit-commands@claude-plugins-official",
+        "conductor@claude-code-workflows",
+        "elements-of-style@superpowers-marketplace",
+        "episodic-memory@superpowers-marketplace",
+        "feature-dev@claude-plugins-official",
+        "frontend-design@claude-plugins-official",
+        "gopls-lsp@claude-plugins-official",
+        "hookify@claude-plugins-official",
+        "openapi@openapi-dev",
+        "pr-review-toolkit@claude-plugins-official",
+        "safety-hooks@cctools-plugins",
+        "security-guidance@claude-plugins-official",
+        "superpowers@superpowers-marketplace",
+        "vercel@claude-plugins-official"
+      ],
+      "mcpServers": [
+        {
+          "name": "context7",
+          "command": "npx",
+          "args": [
+            "-y",
+            "@upstash/context7-mcp",
+            "--api-key",
+            "ctx7sk-4718ff3c-b968-48b2-bce1-15211ca6e88f"
+          ],
+          "scope": "user"
+        }
+      ]
+    }
+  },
+  "localItems": {
+    "agents": [
+      "developer-experience",
+      "test-runner/test-runner.md"
+    ],
+    "commands": [
+      "commit.md",
+      "create-release.md",
+      "recovery-prompt.md",
+      "update-memory.md"
+    ],
+    "skills": [
+      "bash",
+      "golang",
+      "pr-comments",
+      "vercel-react-best-practices",
+      "web-design-guidelines"
+    ],
+    "hooks": [
+      "block-dangerous-commands.sh",
+      "format-on-save.sh",
+      "log-bash-commands.sh",
+      "markdown_formatter.py",
+      "protect-sensitive-files.sh"
+    ],
+    "output-styles": [
+      "technical-evangelist.md"
+    ]
+  }
 }

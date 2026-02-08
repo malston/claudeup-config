@@ -4,23 +4,11 @@
   "marketplaces": [
     {
       "source": "github",
-      "repo": "anthropics/claude-code"
-    },
-    {
-      "source": "github",
       "repo": "anthropics/claude-plugins-official"
     },
     {
       "source": "github",
       "repo": "claudeup/claude-conductor"
-    },
-    {
-      "source": "github",
-      "repo": "mixedbread-ai/mgrep"
-    },
-    {
-      "source": "github",
-      "repo": "obra/superpowers-marketplace"
     },
     {
       "source": "github",
@@ -32,8 +20,9 @@
     }
   ],
   "plugins": [
-    "conductor@claude-conductor",
-    "gopls-lsp@claude-plugins-official"
+    "claude-hud@claude-hud",
+    "claude-mem@thedotmack",
+    "conductor@claude-conductor"
   ],
   "detect": {},
   "sandbox": {}

@@ -29,10 +29,6 @@
     {
       "source": "github",
       "repo": "anthropics/skills"
-    },
-    {
-      "source": "github",
-      "repo": "davila7/claude-code-templates"
     }
   ],
   "plugins": [
