@@ -4,7 +4,15 @@
   "marketplaces": [
     {
       "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    {
+      "source": "github",
       "repo": "jarrodwatts/claude-hud"
+    },
+    {
+      "source": "github",
+      "repo": "obra/superpowers-marketplace"
     },
     {
       "source": "github",
@@ -21,7 +29,13 @@
       "plugins": [
         "claude-hud@claude-hud",
         "claude-mem@thedotmack",
-        "safety-hooks@cctools-plugins"
+        "episodic-memory@superpowers-marketplace",
+        "feature-dev@claude-plugins-official",
+        "gopls-lsp@claude-plugins-official",
+        "hookify@claude-plugins-official",
+        "pr-review-toolkit@claude-plugins-official",
+        "safety-hooks@cctools-plugins",
+        "superpowers@superpowers-marketplace"
       ],
       "mcpServers": [
         {
@@ -50,6 +64,7 @@
     ],
     "skills": [
       "bash",
+      "golang",
       "pr-comments"
     ],
     "hooks": [
