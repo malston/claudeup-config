@@ -4,7 +4,11 @@
   "marketplaces": [
     { "source": "github", "repo": "anthropics/claude-plugins-official" }
   ],
-  "plugins": ["gopls-lsp@claude-plugins-official"],
+  "perScope": {
+    "project": {
+      "plugins": ["gopls-lsp@claude-plugins-official"]
+    }
+  },
   "detect": {
     "files": ["go.mod", "go.sum"]
   }

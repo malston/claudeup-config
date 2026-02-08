@@ -2,8 +2,12 @@
   "name": "debugging",
   "description": "Debugging and error analysis",
   "marketplaces": [{ "source": "github", "repo": "wshobson/agents" }],
-  "plugins": [
-    "debugging-toolkit@claude-code-workflows",
-    "error-debugging@claude-code-workflows"
-  ]
+  "perScope": {
+    "project": {
+      "plugins": [
+        "debugging-toolkit@claude-code-workflows",
+        "error-debugging@claude-code-workflows"
+      ]
+    }
+  }
 }

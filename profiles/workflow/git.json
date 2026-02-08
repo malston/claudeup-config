@@ -5,9 +5,13 @@
     { "source": "github", "repo": "anthropics/claude-plugins-official" },
     { "source": "github", "repo": "wshobson/agents" }
   ],
-  "plugins": [
-    "commit-commands@claude-plugins-official",
-    "git-pr-workflows@claude-code-workflows",
-    "github@claude-plugins-official"
-  ]
+  "perScope": {
+    "user": {
+      "plugins": [
+        "commit-commands@claude-plugins-official",
+        "git-pr-workflows@claude-code-workflows",
+        "github@claude-plugins-official"
+      ]
+    }
+  }
 }

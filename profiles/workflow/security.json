@@ -6,10 +6,14 @@
     { "source": "github", "repo": "wshobson/agents" },
     { "source": "github", "repo": "pchalasani/claude-code-tools" }
   ],
-  "plugins": [
-    "safety-hooks@cctools-plugins",
-    "security-compliance@claude-code-workflows",
-    "security-guidance@claude-plugins-official",
-    "security-scanning@claude-code-workflows"
-  ]
+  "perScope": {
+    "project": {
+      "plugins": [
+        "safety-hooks@cctools-plugins",
+        "security-compliance@claude-code-workflows",
+        "security-guidance@claude-plugins-official",
+        "security-scanning@claude-code-workflows"
+      ]
+    }
+  }
 }

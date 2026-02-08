@@ -5,8 +5,12 @@
     { "source": "github", "repo": "obra/superpowers-marketplace" },
     { "source": "github", "repo": "thedotmack/claude-mem" }
   ],
-  "plugins": [
-    "claude-mem@thedotmack",
-    "episodic-memory@superpowers-marketplace"
-  ]
+  "perScope": {
+    "user": {
+      "plugins": [
+        "claude-mem@thedotmack",
+        "episodic-memory@superpowers-marketplace"
+      ]
+    }
+  }
 }

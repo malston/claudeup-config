@@ -5,10 +5,14 @@
     { "source": "github", "repo": "wshobson/agents" },
     { "source": "github", "repo": "davila7/claude-code-templates" }
   ],
-  "plugins": [
-    "performance-testing-review@claude-code-workflows",
-    "tdd-workflows@claude-code-workflows",
-    "testing-suite@claude-code-templates",
-    "unit-testing@claude-code-workflows"
-  ]
+  "perScope": {
+    "project": {
+      "plugins": [
+        "performance-testing-review@claude-code-workflows",
+        "tdd-workflows@claude-code-workflows",
+        "testing-suite@claude-code-templates",
+        "unit-testing@claude-code-workflows"
+      ]
+    }
+  }
 }

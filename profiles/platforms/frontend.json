@@ -5,11 +5,15 @@
     { "source": "github", "repo": "anthropics/claude-plugins-official" },
     { "source": "github", "repo": "davila7/claude-code-templates" }
   ],
-  "plugins": [
-    "frontend-design@claude-plugins-official",
-    "nextjs-vercel-pro@claude-code-templates",
-    "vercel@claude-plugins-official"
-  ],
+  "perScope": {
+    "project": {
+      "plugins": [
+        "frontend-design@claude-plugins-official",
+        "nextjs-vercel-pro@claude-code-templates",
+        "vercel@claude-plugins-official"
+      ]
+    }
+  },
   "detect": {
     "files": [
       "next.config.js",

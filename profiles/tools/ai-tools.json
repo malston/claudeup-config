@@ -4,11 +4,15 @@
   "marketplaces": [
     { "source": "github", "repo": "pchalasani/claude-code-tools" }
   ],
-  "plugins": [
-    "aichat@cctools-plugins",
-    "langroid@cctools-plugins",
-    "tmux-cli@cctools-plugins",
-    "voice@cctools-plugins",
-    "workflow@cctools-plugins"
-  ]
+  "perScope": {
+    "user": {
+      "plugins": [
+        "aichat@cctools-plugins",
+        "langroid@cctools-plugins",
+        "tmux-cli@cctools-plugins",
+        "voice@cctools-plugins",
+        "workflow@cctools-plugins"
+      ]
+    }
+  }
 }

@@ -5,9 +5,13 @@
     { "source": "github", "repo": "anthropics/claude-plugins-official" },
     { "source": "github", "repo": "wshobson/agents" }
   ],
-  "plugins": [
-    "frontend-mobile-development@claude-code-workflows",
-    "frontend-mobile-security@claude-code-workflows",
-    "swift-lsp@claude-plugins-official"
-  ]
+  "perScope": {
+    "project": {
+      "plugins": [
+        "frontend-mobile-development@claude-code-workflows",
+        "frontend-mobile-security@claude-code-workflows",
+        "swift-lsp@claude-plugins-official"
+      ]
+    }
+  }
 }

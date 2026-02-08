@@ -2,8 +2,12 @@
   "name": "backend",
   "description": "Backend development and API security",
   "marketplaces": [{ "source": "github", "repo": "wshobson/agents" }],
-  "plugins": [
-    "backend-api-security@claude-code-workflows",
-    "backend-development@claude-code-workflows"
-  ]
+  "perScope": {
+    "project": {
+      "plugins": [
+        "backend-api-security@claude-code-workflows",
+        "backend-development@claude-code-workflows"
+      ]
+    }
+  }
 }
