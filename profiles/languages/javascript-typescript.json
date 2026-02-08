@@ -1,0 +1,12 @@
+{
+  "name": "javascript-typescript",
+  "description": "JavaScript and TypeScript development",
+  "marketplaces": [{ "source": "github", "repo": "wshobson/agents" }],
+  "plugins": [
+    "javascript-typescript@claude-code-workflows",
+    "web-scripting@claude-code-workflows"
+  ],
+  "detect": {
+    "files": ["package.json", "tsconfig.json"]
+  }
+}

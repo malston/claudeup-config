@@ -1,0 +1,12 @@
+{
+  "name": "superpowers",
+  "description": "Superpowers suite: enhanced capabilities and workflows",
+  "marketplaces": [
+    { "source": "github", "repo": "obra/superpowers-marketplace" }
+  ],
+  "plugins": [
+    "double-shot-latte@superpowers-marketplace",
+    "superpowers@superpowers-marketplace",
+    "superpowers-lab@superpowers-marketplace"
+  ]
+}

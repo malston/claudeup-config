@@ -1,0 +1,9 @@
+{
+  "name": "documentation",
+  "description": "Code documentation and generation",
+  "marketplaces": [{ "source": "github", "repo": "wshobson/agents" }],
+  "plugins": [
+    "code-documentation@claude-code-workflows",
+    "documentation-generation@claude-code-workflows"
+  ]
+}
