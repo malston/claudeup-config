@@ -1,0 +1,15 @@
+{
+  "name": "cc-tools",
+  "description": "claude-code-tools: safety-hooks + aichat plugins",
+  "marketplaces": [
+    {
+      "source": "github",
+      "repo": "pchalasani/claude-code-tools"
+    }
+  ],
+  "plugins": [
+    "safety-hooks@cctools-plugins",
+    "aichat@cctools-plugins"
+  ],
+  "detect": {}
+}

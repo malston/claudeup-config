@@ -1,0 +1,19 @@
+{
+  "name": "cc-tools-full",
+  "description": "claude-code-tools: all plugins",
+  "marketplaces": [
+    {
+      "source": "github",
+      "repo": "pchalasani/claude-code-tools"
+    }
+  ],
+  "plugins": [
+    "safety-hooks@cctools-plugins",
+    "aichat@cctools-plugins",
+    "workflow@cctools-plugins",
+    "tmux-cli@cctools-plugins",
+    "langroid@cctools-plugins",
+    "voice@cctools-plugins"
+  ],
+  "detect": {}
+}

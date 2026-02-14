@@ -36,7 +36,7 @@ gh api repos/{owner}/{repo}/pulls/<PR>/comments --jq '.[] | {path: .path, line: 
 gh pr view <PR> --comments
 
 # Get the diff for context
-gh pr diff <PR> --stat
+gh pr diff <PR> --name-only
 ```
 
 ### Step 3: Analyze and present
