@@ -187,6 +187,7 @@
     "python": false,
     "rust-engineer": false,
     "security-lens": false,
+    "session-notes": true,
     "terraform": false,
     "test-driven-development": false,
     "typescript": false,

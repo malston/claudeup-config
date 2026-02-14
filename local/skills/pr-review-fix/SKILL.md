@@ -31,9 +31,28 @@ gh pr view <PR> --comments
 gh pr diff <PR> --name-only
 ```
 
-### Step 2: Categorize and confirm scope
+### Step 2: Self-review the diff
 
-Categorize each comment:
+Before addressing reviewer comments, scan the PR diff for issues reviewers may have missed:
+
+```bash
+gh pr diff <PR>
+```
+
+Check against this checklist:
+
+- [ ] All new code paths have unit tests
+- [ ] No non-deterministic ordering (unsorted map iteration, slice output)
+- [ ] Edge cases handled (empty inputs, nil values, duplicate entries)
+- [ ] Security-sensitive changes have explicit edge case tests
+- [ ] No test assertions weakened to make tests pass
+- [ ] No accidental debug code, TODOs, or commented-out blocks
+
+Flag any self-review findings alongside the reviewer comments in Step 3.
+
+### Step 3: Categorize and confirm scope
+
+Categorize each comment (including self-review findings):
 
 - **Blocking**: Must fix (bugs, security, logic errors, explicit requests)
 - **Suggestions**: Worth considering (style, alternatives)
@@ -42,7 +61,7 @@ Categorize each comment:
 
 Present categorized items with your technical assessment of each. Ask Mark which to address -- don't assume all suggestions should be implemented.
 
-### Step 3: Fix items
+### Step 4: Fix items
 
 Work through confirmed items in priority order (blocking > simple > complex). For each:
 
@@ -50,11 +69,11 @@ Work through confirmed items in priority order (blocking > simple > complex). Fo
 2. Implement the fix
 3. If the fix touches security-related code, add edge case tests proactively
 
-### Step 4: Run tests
+### Step 5: Run tests
 
 Run the project's full test suite. All tests must pass. If a test fails, fix the root cause -- never weaken assertions to make tests pass.
 
-### Step 5: Commit and push
+### Step 6: Commit and push
 
 ```bash
 # Verify correct branch
@@ -70,7 +89,7 @@ git commit -m "fix: address PR review feedback
 git push
 ```
 
-### Step 6: Reply to comment threads
+### Step 7: Reply to comment threads
 
 Reply in each original comment thread with a brief technical note:
 
@@ -81,7 +100,7 @@ gh api repos/{owner}/{repo}/pulls/<PR>/comments/<comment-id>/replies \
 
 No performative gratitude. State the fix and move on.
 
-### Step 7: Report
+### Step 8: Report
 
 Summarize for Mark:
 
