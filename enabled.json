@@ -183,6 +183,7 @@
     "golang": true,
     "kubernetes": false,
     "pr-comments": true,
+    "pr-review-fix": true,
     "python": false,
     "rust-engineer": false,
     "security-lens": false,
