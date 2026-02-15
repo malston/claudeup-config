@@ -22,10 +22,10 @@
 
 ## Claude Code Configuration
 
-- Use `claudeup local` to manage local extensions (agents, commands, skills, hooks, rules, output-styles)
-- `claudeup local list` - show all items and their enabled status
-- `claudeup local enable <category> <items...>` - enable items (supports wildcards like `gsd-*`)
-- `claudeup local disable <category> <items...>` - disable items
-- `claudeup local install <category> <path>` - install items from external paths
-- `claudeup local view <category> <item>` - view item contents
-- Items live in `~/.claudeup/local/<category>/` with absolute symlinks in `~/.claude/<category>/` when enabled
+- Use `claudeup ext` to manage extensions (agents, commands, skills, hooks, rules, output-styles)
+- `claudeup ext list` - show all items and their enabled status
+- `claudeup ext enable <category> <items...>` - enable items (supports wildcards like `gsd-*`)
+- `claudeup ext disable <category> <items...>` - disable items
+- `claudeup ext install <category> <path>` - install items from external paths
+- `claudeup ext view <category> <item>` - view item contents
+- Items live in `~/.claudeup/ext/<category>/` with absolute symlinks in `~/.claude/<category>/` when enabled
