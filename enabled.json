@@ -190,6 +190,7 @@
     "session-notes": true,
     "terraform": false,
     "test-driven-development": false,
+    "the-antislop": true,
     "typescript": false,
     "vercel-react-best-practices": false,
     "vsphere-architect": false,
