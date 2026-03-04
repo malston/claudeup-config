@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "frontend-multiscope",
   "description": "Frontend development: Next.js, Tailwind, shadcn, Vercel",
   "marketplaces": [
     {
@@ -9,20 +9,22 @@
     {
       "source": "github",
       "repo": "davila7/claude-code-templates"
-    },
-    {
-      "source": "github",
-      "repo": "obra/superpowers-marketplace"
     }
   ],
-  "plugins": [
-    "commit-commands@claude-code-plugins",
-    "episodic-memory@superpowers-marketplace",
-    "frontend-design@claude-plugins-official",
-    "nextjs-vercel-pro@claude-code-templates",
-    "vercel@claude-plugins-official",
-    "superpowers@superpowers-marketplace"
-  ],
+  "perScope": {
+    "user": {
+      "plugins": [
+        "commit-commands@claude-code-plugins"
+      ]
+    },
+    "project": {
+      "plugins": [
+        "frontend-design@claude-plugins-official",
+        "nextjs-vercel-pro@claude-code-templates",
+        "vercel@claude-plugins-official"
+      ]
+    }
+  },
   "detect": {
     "files": [
       "next.config.js",

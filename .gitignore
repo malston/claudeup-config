@@ -35,3 +35,4 @@ config.json
 events/
 sandboxes/
 profiles/_lab-snapshot-*.json
+backups/

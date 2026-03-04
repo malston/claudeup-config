@@ -8,8 +8,11 @@
     "user": {
       "plugins": [
         "double-shot-latte@superpowers-marketplace",
-        "superpowers@superpowers-marketplace",
-        "superpowers-lab@superpowers-marketplace"
+        "elements-of-style@superpowers-marketplace",
+        "episodic-memory@superpowers-marketplace",
+        "superpowers-developing-for-claude-code@superpowers-marketplace",
+        "superpowers-lab@superpowers-marketplace",
+        "superpowers@superpowers-marketplace"
       ]
     }
   }
