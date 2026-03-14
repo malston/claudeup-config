@@ -1,0 +1,1 @@
+/Users/markalston/.claudeup/ext/agents/developer-experience/powershell-module-architect.md
