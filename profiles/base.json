@@ -42,7 +42,7 @@
             "-y",
             "@upstash/context7-mcp",
             "--api-key",
-            "ctx7sk-5aa510cb-aee4-4f1b-8b6d-df912b41e07d"
+            "ctx7sk-redacted"
           ],
           "scope": "user"
         }
@@ -50,14 +50,20 @@
     }
   },
   "extensions": {
-    "agents": ["test-runner/test-runner.md"],
+    "agents": [
+      "test-runner/test-runner.md"
+    ],
     "commands": [
       "commit.md",
       "create-release.md",
       "recovery-prompt.md",
       "update-memory.md"
     ],
-    "skills": ["bash", "golang", "pr-comments"],
+    "skills": [
+      "bash",
+      "golang",
+      "pr-comments"
+    ],
     "hooks": [
       "block-dangerous-commands.sh",
       "format-on-save.sh",
@@ -65,6 +71,8 @@
       "markdown_formatter.py",
       "protect-sensitive-files.sh"
     ],
-    "output-styles": ["technical-evangelist.md"]
+    "output-styles": [
+      "technical-evangelist.md"
+    ]
   }
 }

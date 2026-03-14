@@ -45,7 +45,7 @@
             "-y",
             "@upstash/context7-mcp",
             "--api-key",
-            "ctx7sk-5aa510cb-aee4-4f1b-8b6d-df912b41e07d"
+            "ctx7sk-redacted"
           ],
           "scope": "user"
         }
