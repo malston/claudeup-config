@@ -1,0 +1,102 @@
+{
+  "name": "base",
+  "description": "base marketplaces and plugins",
+  "marketplaces": [
+    {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    {
+      "source": "github",
+      "repo": "jarrodwatts/claude-hud"
+    },
+    {
+      "source": "github",
+      "repo": "obra/superpowers-marketplace"
+    },
+    {
+      "source": "github",
+      "repo": "thedotmack/claude-mem"
+    }
+  ],
+  "detect": {},
+  "perScope": {
+    "user": {
+      "plugins": [
+        "claude-hud@claude-hud",
+        "claude-mem@thedotmack",
+        "code-simplifier@claude-plugins-official",
+        "commit-commands@claude-plugins-official",
+        "episodic-memory@superpowers-marketplace",
+        "feature-dev@claude-plugins-official",
+        "gopls-lsp@claude-plugins-official",
+        "pr-review-toolkit@claude-plugins-official",
+        "superpowers@superpowers-marketplace"
+      ],
+      "mcpServers": [
+        {
+          "name": "context7",
+          "command": "npx",
+          "args": [
+            "-y",
+            "@upstash/context7-mcp",
+            "--api-key",
+            "ctx7sk-76b7fcde-1bed-49b4-9f44-3f82a5d2416f"
+          ],
+          "scope": "user"
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "agents": [
+      "developer-experience/build-engineer.md",
+      "developer-experience/cli-developer.md",
+      "developer-experience/dependency-manager.md",
+      "developer-experience/documentation-engineer.md",
+      "developer-experience/dx-optimizer.md",
+      "developer-experience/git-workflow-manager.md",
+      "developer-experience/legacy-modernizer.md",
+      "developer-experience/mcp-developer.md",
+      "developer-experience/powershell-module-architect.md",
+      "developer-experience/powershell-ui-architect.md",
+      "developer-experience/refactoring-specialist.md",
+      "developer-experience/slack-expert.md",
+      "developer-experience/tooling-engineer.md",
+      "test-runner/test-runner.md"
+    ],
+    "commands": [
+      "commit.md",
+      "create-release.md",
+      "make-local-issue.md",
+      "recovery-prompt.md",
+      "update-memory.md"
+    ],
+    "skills": [
+      "bash",
+      "context7-mcp",
+      "golang",
+      "playwright-skill",
+      "pr-comments",
+      "pr-review-fix"
+    ],
+    "hooks": [
+      "block-dangerous-commands.sh",
+      "format-on-save.sh",
+      "log-bash-commands.sh",
+      "markdown_formatter.py",
+      "protect-sensitive-files.sh"
+    ],
+    "output-styles": [
+      "technical-evangelist.md",
+      "thinking-jester.md"
+    ],
+    "rules": [
+      "coding-standards.md",
+      "context7.md",
+      "documentation-guidelines.md",
+      "naming-and-comments.md",
+      "version-control.md"
+    ]
+  }
+}

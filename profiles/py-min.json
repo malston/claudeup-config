@@ -1,0 +1,153 @@
+{
+  "name": "py-min",
+  "description": "Profile for a inimal python setup",
+  "mcpServers": [
+    {
+      "name": "context7",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp",
+        "--api-key",
+        "ctx7sk-4718ff3c-b968-48b2-bce1-15211ca6e88f"
+      ],
+      "scope": "user"
+    }
+  ],
+  "marketplaces": [
+    {
+      "source": "github",
+      "repo": "ComposioHQ/awesome-claude-plugins"
+    },
+    {
+      "source": "github",
+      "repo": "affaan-m/everything-claude-code"
+    },
+    {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    {
+      "source": "github",
+      "repo": "anthropics/skills"
+    },
+    {
+      "source": "github",
+      "repo": "aperepel/textual-tui-skill"
+    },
+    {
+      "source": "git",
+      "url": "https://github.com/mbailey/claude-plugins.git"
+    },
+    {
+      "source": "github",
+      "repo": "jarrodwatts/claude-hud"
+    },
+    {
+      "source": "github",
+      "repo": "jmanhype/claude-code-plugins"
+    },
+    {
+      "source": "github",
+      "repo": "kokko-ng/kokko-cmds"
+    },
+    {
+      "source": "github",
+      "repo": "malston/claude-code-tutor"
+    },
+    {
+      "source": "github",
+      "repo": "malston/openapi-docs-generator"
+    },
+    {
+      "source": "github",
+      "repo": "malston/vsphere-architect"
+    },
+    {
+      "source": "github",
+      "repo": "ntcoding/claude-skillz"
+    },
+    {
+      "source": "github",
+      "repo": "obra/superpowers-marketplace"
+    },
+    {
+      "source": "github",
+      "repo": "pchalasani/claude-code-tools"
+    },
+    {
+      "source": "github",
+      "repo": "thedotmack/claude-mem"
+    },
+    {
+      "source": "github",
+      "repo": "wshobson/agents"
+    }
+  ],
+  "plugins": [
+    "code-review@claude-plugins-official",
+    "code-simplifier@claude-plugins-official",
+    "commit-commands@claude-plugins-official",
+    "feature-dev@claude-plugins-official",
+    "github@claude-plugins-official",
+    "playwright@claude-plugins-official",
+    "pr-review-toolkit@claude-plugins-official",
+    "pyright-lsp@claude-plugins-official",
+    "security-guidance@claude-plugins-official"
+  ],
+  "detect": {},
+  "extensions": {
+    "agents": [
+      "developer-experience/build-engineer.md",
+      "developer-experience/cli-developer.md",
+      "developer-experience/dependency-manager.md",
+      "developer-experience/documentation-engineer.md",
+      "developer-experience/dx-optimizer.md",
+      "developer-experience/git-workflow-manager.md",
+      "developer-experience/legacy-modernizer.md",
+      "developer-experience/mcp-developer.md",
+      "developer-experience/powershell-module-architect.md",
+      "developer-experience/powershell-ui-architect.md",
+      "developer-experience/refactoring-specialist.md",
+      "developer-experience/slack-expert.md",
+      "developer-experience/tooling-engineer.md",
+      "test-runner/test-runner.md"
+    ],
+    "commands": [
+      "commit.md",
+      "create-release.md",
+      "make-local-issue.md",
+      "recovery-prompt.md",
+      "update-memory.md"
+    ],
+    "skills": [
+      "bash",
+      "context7-mcp",
+      "golang",
+      "playwright-skill",
+      "pr-comments",
+      "pr-review-fix",
+      "session-notes",
+      "the-antislop"
+    ],
+    "hooks": [
+      "block-dangerous-commands.sh",
+      "format-on-save.sh",
+      "log-bash-commands.sh",
+      "markdown_formatter.py",
+      "protect-sensitive-files.sh"
+    ],
+    "rules": [
+      "coding-standards.md",
+      "context7.md",
+      "documentation-guidelines.md",
+      "naming-and-comments.md",
+      "version-control.md"
+    ],
+    "output-styles": [
+      "george-carlin.md",
+      "technical-evangelist.md",
+      "thinking-jester.md"
+    ]
+  }
+}
