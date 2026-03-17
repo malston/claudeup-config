@@ -1,0 +1,14 @@
+{
+  "name": "bare",
+  "description": "empty profile for clean-slate labs",
+  "marketplaces": [
+    {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    }
+  ],
+  "detect": {},
+  "perScope": {
+    "user": {}
+  }
+}

@@ -41,7 +41,7 @@
     "data-ai/nlp-engineer.md": false,
     "data-ai/postgres-pro.md": false,
     "data-ai/prompt-engineer.md": false,
-    "developer-experience": true,
+    "developer-experience": false,
     "developer-experience/build-engineer.md": false,
     "developer-experience/cli-developer.md": false,
     "developer-experience/dependency-manager.md": false,
@@ -165,11 +165,13 @@
     "save-iterm-session.py": false
   },
   "output-styles": {
-    "george-carlin.md": true,
-    "technical-evangelist.md": true
+    "george-carlin.md": false,
+    "technical-evangelist.md": true,
+    "thinking-jester.md": true
   },
   "rules": {
     "coding-standards.md": true,
+    "context7.md": true,
     "documentation-guidelines.md": true,
     "naming-and-comments.md": true,
     "version-control.md": true
@@ -181,12 +183,15 @@
     "cloud": false,
     "code-reviewer": false,
     "commit-helper": false,
+    "context7-mcp": true,
+    "explain-code": true,
     "frontend-web-dev": false,
     "golang": true,
     "kubernetes": false,
     "playwright-skill": true,
     "pr-comments": true,
     "pr-review-fix": true,
+    "prompt-lookup": true,
     "python": false,
     "rust-engineer": false,
     "security-lens": false,
