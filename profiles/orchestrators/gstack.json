@@ -1,0 +1,93 @@
+{
+  "name": "gstack",
+  "description": "Marketplaces and plugins for gstack development",
+  "marketplaces": [
+    {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    {
+      "source": "github",
+      "repo": "jarrodwatts/claude-hud"
+    },
+    {
+      "source": "github",
+      "repo": "obra/superpowers-marketplace"
+    },
+    {
+      "source": "github",
+      "repo": "thedotmack/claude-mem"
+    }
+  ],
+  "detect": {},
+  "perScope": {
+    "user": {
+      "plugins": [
+        "claude-hud@claude-hud",
+        "claude-mem@thedotmack",
+        "code-review@claude-plugins-official",
+        "code-simplifier@claude-plugins-official",
+        "commit-commands@claude-plugins-official",
+        "episodic-memory@superpowers-marketplace",
+        "feature-dev@claude-plugins-official",
+        "github@claude-plugins-official",
+        "gopls-lsp@claude-plugins-official",
+        "pr-review-toolkit@claude-plugins-official",
+        "playwright@claude-plugins-official",
+        "security-guidance@claude-plugins-official",
+        "superpowers@superpowers-marketplace"
+      ],
+      "mcpServers": [
+        {
+          "name": "context7",
+          "command": "npx",
+          "args": [
+            "-y",
+            "@upstash/context7-mcp",
+            "--api-key",
+            "ctx7sk-redacted"
+          ],
+          "scope": "user"
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "agents": [
+      "test-runner/test-runner.md"
+    ],
+    "commands": [
+      "commit.md",
+      "create-release.md",
+      "make-local-issue.md",
+      "recovery-prompt.md",
+      "update-memory.md"
+    ],
+    "skills": [
+      "bash",
+      "context7-mcp",
+      "golang",
+      "playwright-skill",
+      "pr-comments",
+      "pr-review-fix"
+    ],
+    "hooks": [
+      "block-dangerous-commands.sh",
+      "format-on-save.sh",
+      "log-bash-commands.sh",
+      "markdown_formatter.py",
+      "protect-sensitive-files.sh"
+    ],
+    "output-styles": [
+      "technical-evangelist.md",
+      "thinking-jester.md"
+    ],
+    "rules": [
+      "coding-standards.md",
+      "context7.md",
+      "documentation-guidelines.md",
+      "naming-and-comments.md",
+      "version-control.md"
+    ]
+  }
+}

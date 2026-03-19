@@ -27,7 +27,6 @@
         "code-simplifier@claude-plugins-official",
         "commit-commands@claude-plugins-official",
         "document-skills@anthropic-agent-skills",
-        "double-shot-latte@superpowers-marketplace",
         "elements-of-style@superpowers-marketplace",
         "episodic-memory@superpowers-marketplace",
         "frontend-design@claude-plugins-official",
@@ -47,43 +46,46 @@
           ],
           "scope": "user"
         }
-      ],
-      "extensions": {
-        "agents": [
-          "developer-experience",
-          "test-runner/test-runner.md"
-        ],
-        "commands": [
-          "commit.md",
-          "create-release.md",
-          "recovery-prompt.md",
-          "update-memory.md"
-        ],
-        "skills": [
-          "bash",
-          "golang",
-          "pr-comments",
-          "pr-review-fix",
-          "session-notes",
-          "the-antislop"
-        ],
-        "hooks": [
-          "block-dangerous-commands.sh",
-          "format-on-save.sh",
-          "log-bash-commands.sh",
-          "markdown_formatter.py",
-          "protect-sensitive-files.sh"
-        ],
-        "rules": [
-          "coding-standards.md",
-          "documentation-guidelines.md",
-          "naming-and-comments.md",
-          "version-control.md"
-        ],
-        "output-styles": [
-          "technical-evangelist.md"
-        ]
-      }
+      ]
     }
+  },
+  "extensions": {
+    "agents": [
+      "test-runner/test-runner.md"
+    ],
+    "commands": [
+      "commit.md",
+      "create-release.md",
+      "make-local-issue.md",
+      "recovery-prompt.md",
+      "update-memory.md"
+    ],
+    "skills": [
+      "bash",
+      "context7-mcp",
+      "golang",
+      "playwright-skill",
+      "pr-comments",
+      "pr-review-fix",
+      "the-antislop"
+    ],
+    "hooks": [
+      "block-dangerous-commands.sh",
+      "format-on-save.sh",
+      "log-bash-commands.sh",
+      "markdown_formatter.py",
+      "protect-sensitive-files.sh"
+    ],
+    "output-styles": [
+      "technical-evangelist.md",
+      "thinking-jester.md"
+    ],
+    "rules": [
+      "coding-standards.md",
+      "context7.md",
+      "documentation-guidelines.md",
+      "naming-and-comments.md",
+      "version-control.md"
+    ]
   }
 }

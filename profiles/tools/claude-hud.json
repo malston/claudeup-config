@@ -1,0 +1,17 @@
+{
+  "name": "claude-hud",
+  "description": "claude-hud: a claude status line plugin for enhanced visibility into model state and context",
+  "marketplaces": [
+    {
+      "source": "github",
+      "repo": "jarrodwatts/claude-hud"
+    }
+  ],
+  "perScope": {
+    "user": {
+      "plugins": [
+        "claude-hud@claude-hud"
+      ]
+    }
+  }
+}

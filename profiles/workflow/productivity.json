@@ -1,14 +1,21 @@
 {
   "name": "productivity",
   "description": "Developer productivity, collaboration, and shell scripting",
-  "marketplaces": [{ "source": "github", "repo": "wshobson/agents" }],
+  "marketplaces": [
+    {
+      "source": "github",
+      "repo": "wshobson/agents"
+    }
+  ],
   "perScope": {
-    "project": {
+    "user": {
       "plugins": [
+        "feature-dev@claude-plugins-official",
         "dependency-management@claude-code-workflows",
         "developer-essentials@claude-code-workflows",
         "framework-migration@claude-code-workflows",
         "full-stack-orchestration@claude-code-workflows",
+        "playwright@claude-plugins-official",
         "shell-scripting@claude-code-workflows",
         "team-collaboration@claude-code-workflows"
       ]

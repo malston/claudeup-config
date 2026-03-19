@@ -1,0 +1,48 @@
+{
+  "name": "common",
+  "description": "a profile for extensions that are commonly used across multiple profiles, but not necessarily all profiles",
+  "marketplaces": [
+    {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    }
+  ],
+  "extensions": {
+    "agents": [
+      "test-runner/test-runner.md"
+    ],
+    "commands": [
+      "commit.md",
+      "create-release.md",
+      "make-local-issue.md",
+      "recovery-prompt.md",
+      "update-memory.md"
+    ],
+    "skills": [
+      "bash",
+      "context7-mcp",
+      "golang",
+      "playwright-skill",
+      "pr-comments",
+      "pr-review-fix"
+    ],
+    "hooks": [
+      "block-dangerous-commands.sh",
+      "format-on-save.sh",
+      "log-bash-commands.sh",
+      "markdown_formatter.py",
+      "protect-sensitive-files.sh"
+    ],
+    "output-styles": [
+      "technical-evangelist.md",
+      "thinking-jester.md"
+    ],
+    "rules": [
+      "coding-standards.md",
+      "context7.md",
+      "documentation-guidelines.md",
+      "naming-and-comments.md",
+      "version-control.md"
+    ]
+  }
+}

@@ -2,12 +2,14 @@
   "name": "superpowers",
   "description": "Superpowers suite: enhanced capabilities and workflows",
   "marketplaces": [
-    { "source": "github", "repo": "obra/superpowers-marketplace" }
+    {
+      "source": "github",
+      "repo": "obra/superpowers-marketplace"
+    }
   ],
   "perScope": {
     "user": {
       "plugins": [
-        "double-shot-latte@superpowers-marketplace",
         "elements-of-style@superpowers-marketplace",
         "episodic-memory@superpowers-marketplace",
         "superpowers-developing-for-claude-code@superpowers-marketplace",

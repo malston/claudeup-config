@@ -2,12 +2,21 @@
   "name": "security",
   "description": "Security scanning, compliance, and safety hooks",
   "marketplaces": [
-    { "source": "github", "repo": "anthropics/claude-plugins-official" },
-    { "source": "github", "repo": "wshobson/agents" },
-    { "source": "github", "repo": "pchalasani/claude-code-tools" }
+    {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    {
+      "source": "github",
+      "repo": "wshobson/agents"
+    },
+    {
+      "source": "github",
+      "repo": "pchalasani/claude-code-tools"
+    }
   ],
   "perScope": {
-    "project": {
+    "user": {
       "plugins": [
         "safety-hooks@cctools-plugins",
         "security-compliance@claude-code-workflows",

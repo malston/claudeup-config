@@ -1,0 +1,18 @@
+{
+  "name": "everything-claude-code-base",
+  "description": "Base profile with affaan-m/everything-claude-code plugin",
+  "marketplaces": [
+    {
+      "source": "github",
+      "repo": "affaan-m/everything-claude-code"
+    }
+  ],
+  "detect": {},
+  "perScope": {
+    "user": {
+      "plugins": [
+        "everything-claude-code@everything-claude-code"
+      ]
+    }
+  }
+}
