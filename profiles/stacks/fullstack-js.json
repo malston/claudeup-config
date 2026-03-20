@@ -3,9 +3,9 @@
   "description": "JavaScript/TypeScript fullstack: essentials + JS/TS, frontend, backend, testing",
   "includes": [
     "essentials",
-    "javascript-typescript",
-    "frontend",
-    "backend",
-    "testing"
+    "languages/javascript-typescript",
+    "platforms/frontend",
+    "platforms/backend",
+    "workflow/testing"
   ]
 }
