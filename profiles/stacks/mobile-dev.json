@@ -5,6 +5,6 @@
     "essentials",
     "platforms/mobile",
     "platforms/frontend",
-    "workflow/testing"
+    "workflows/testing"
   ]
 }

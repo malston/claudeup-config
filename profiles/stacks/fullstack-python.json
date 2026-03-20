@@ -5,6 +5,6 @@
     "essentials",
     "languages/python",
     "platforms/backend",
-    "workflow/testing"
+    "workflows/testing"
   ]
 }

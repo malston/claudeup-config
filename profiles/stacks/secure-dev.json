@@ -3,8 +3,8 @@
   "description": "Security-focused development: essentials + security, testing, debugging",
   "includes": [
     "essentials",
-    "workflow/security",
-    "workflow/testing",
-    "workflow/debugging"
+    "workflows/security",
+    "workflows/testing",
+    "workflows/debugging"
   ]
 }

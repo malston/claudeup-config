@@ -45,9 +45,24 @@
             "-y",
             "@upstash/context7-mcp",
             "--api-key",
-            "ctx7sk-76b7fcde-1bed-49b4-9f44-3f82a5d2416f"
+            "$CONTEXT7_API_KEY"
           ],
-          "scope": "user"
+          "scope": "user",
+          "secrets": {
+            "CONTEXT7_API_KEY": {
+              "description": "Context7 MCP API key",
+              "sources": [
+                {
+                  "type": "1password",
+                  "ref": "op://Private/CONTEXT7_API_KEY/credential"
+                },
+                {
+                  "type": "env",
+                  "key": "CONTEXT7_API_KEY"
+                }
+              ]
+            }
+          }
         }
       ]
     }

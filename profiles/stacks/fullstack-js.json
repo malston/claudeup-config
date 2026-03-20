@@ -6,6 +6,6 @@
     "languages/javascript-typescript",
     "platforms/frontend",
     "platforms/backend",
-    "workflow/testing"
+    "workflows/testing"
   ]
 }
