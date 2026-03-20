@@ -1,6 +1,6 @@
 {
-  "name": "essentials",
-  "description": "Core tools and extensions via skill categories",
+  "name": "go-backend",
+  "description": "Go backend: code quality, testing, security, vcs, memory, reference, productivity",
   "includes": [
     "extensions/common",
     "categories/code-quality",
@@ -10,8 +10,7 @@
     "categories/memory",
     "categories/reference",
     "categories/productivity",
-    "categories/tooling",
     "languages/go",
-    "orchestrators/superpowers"
+    "platforms/backend"
   ]
 }
