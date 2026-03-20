@@ -1,0 +1,5 @@
+{
+  "name": "go-dev",
+  "description": "Go development: essentials + Go language",
+  "includes": ["essentials", "languages/go"]
+}

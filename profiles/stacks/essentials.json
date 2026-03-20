@@ -1,6 +1,6 @@
 {
   "name": "essentials",
-  "description": "Core tools and extensions via skill categories",
+  "description": "Language-agnostic core: all categories + superpowers orchestrator",
   "includes": [
     "extensions/common",
     "categories/code-quality",
@@ -11,7 +11,6 @@
     "categories/reference",
     "categories/productivity",
     "categories/tooling",
-    "languages/go",
     "orchestrators/superpowers"
   ]
 }
