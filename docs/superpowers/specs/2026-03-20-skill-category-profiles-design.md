@@ -2,7 +2,7 @@
 
 ## Goal
 
-Create a `category-profiles/` directory alongside the existing `profiles/` structure, organizing plugins by skill category for composable reuse. Categories are self-contained capability units (plugins, rules, MCP servers, agents, hooks). Stacks compose categories into common combos.
+Create a `profiles/categories/` directory within the existing profile structure, organizing plugins by skill category for composable reuse. Categories are self-contained capability units (plugins, rules, MCP servers, agents, hooks). Stacks compose categories into common combos.
 
 ## Sources
 
@@ -12,7 +12,7 @@ Create a `category-profiles/` directory alongside the existing `profiles/` struc
 
 ## Design Decisions
 
-1. **Parallel structure** -- `category-profiles/` coexists with `profiles/`. Originals stay intact.
+1. **Nested structure** -- `profiles/categories/` lives inside the existing profile directory so that `includes` resolution works without path hacks. Originals stay intact.
 2. **Composable atoms** -- Each category is an independent atom. Stacks in `profiles/stacks/` compose multiple categories via `includes`.
 3. **Custom taxonomy** -- Categories derived from actual plugin inventory, informed by Anthropic's 9-category and 3-category taxonomies.
 4. **Full bundles** -- Each category includes plugins, rules, skills, agents, hooks -- everything needed for that capability.
@@ -20,7 +20,7 @@ Create a `category-profiles/` directory alongside the existing `profiles/` struc
 
 ## Categories
 
-### code-quality (project scope)
+### code-quality (user scope)
 
 Review, simplification, and style enforcement.
 
@@ -72,7 +72,7 @@ TDD, verification, debugging, e2e, and performance testing.
 
 **@trq212 mapping:** Product Verification
 
-### security (project scope)
+### security (user scope)
 
 SAST, hardening, threat modeling, auth patterns, and safety guardrails.
 
@@ -128,32 +128,31 @@ Persistence, vault, session continuity, and knowledge management.
 
 **@trq212 mapping:** No direct equivalent (unique to this setup)
 
-### reference (mixed scope)
+### reference (user scope, with project-scope plugins)
 
-Library docs, language-specific tooling, documentation generation.
+Library docs, documentation generation, and reference skills. LSPs stay in `languages/` profiles.
 
-Language LSPs and language-specific plugins go at project scope (activated by project detection). Documentation and reference skills go at user scope.
+**Plugins (user scope):**
 
-**Plugins (project scope):**
-
-- `gopls-lsp@claude-plugins-official`
-- `pyright-lsp@claude-plugins-official`
-- `swift-lsp@claude-plugins-official`
 - `document-skills@anthropic-agent-skills`
 - `code-documentation@claude-code-workflows`
 - `documentation-generation@claude-code-workflows`
 
-**Skills (user scope):**
+**Skills:**
 
 - `bash`
 - `golang`
 - `context7-mcp`
 - `explain-code`
 
-**Rules (user scope):**
+**Rules:**
 
 - `context7.md`
 - `documentation-guidelines.md`
+
+**MCP Servers:**
+
+- `context7` (npx @upstash/context7-mcp)
 
 **@trq212 mapping:** Library & API Reference
 
@@ -197,11 +196,13 @@ Claude Code configuration, plugin development, HUD, and meta-tooling.
 - `claude-code-setup@claude-plugins-official`
 - `claude-md-management@claude-plugins-official`
 - `hookify@claude-plugins-official`
+- `plugin-dev@claude-code-plugins`
 - `superpowers-developing-for-claude-code@superpowers-marketplace`
 
 **Output Styles:**
 
 - `technical-evangelist.md`
+- `thinking-jester.md`
 
 **@trq212 mapping:** No direct equivalent (meta-tooling)
 
@@ -212,7 +213,18 @@ Claude Code configuration, plugin development, HUD, and meta-tooling.
 - `stacks/` -- Updated to compose from category-profiles
 - `orchestrators/` -- Opinionated meta-configurations, kept as-is
 - Root profiles (base.json, bare.json, etc.) -- Unchanged
-- `extensions/common.json` -- Shared hooks stay in base infrastructure
+
+## Fate of `extensions/common.json`
+
+`extensions/common.json` currently bundles skills, rules, hooks, commands, and output styles used by `stacks/essentials.json` and others. With categories, its contents are distributed:
+
+- **Hooks** stay in `extensions/common.json` (cross-cutting infrastructure)
+- **Skills** move to their respective categories (bash/golang to reference, playwright-skill to testing, etc.)
+- **Rules** move to their respective categories (coding-standards to code-quality, version-control to vcs, etc.)
+- **Commands** move to their respective categories (commit.md to vcs, update-memory.md to memory, etc.)
+- **Output Styles** move to tooling category
+
+`extensions/common.json` is retained but slimmed down to hooks only.
 
 ## Shared infrastructure (stays in base.json)
 
@@ -224,24 +236,64 @@ Hooks that are cross-cutting infrastructure, not category-specific:
 - `markdown_formatter.py`
 - `protect-sensitive-files.sh`
 
-These remain in `base.json` or `extensions/common.json`.
+These remain in `base.json` and `extensions/common.json`.
 
 ## Composition model
 
+### Include resolution
+
+Includes resolve relative to the `profiles/` directory. Existing examples:
+
+- From `stacks/essentials.json`: `"extensions/common"` resolves to `profiles/extensions/common.json`
+- From `stacks/fullstack-go.json`: `"essentials"` resolves to `profiles/stacks/essentials.json` (name-based lookup within stacks)
+
+By placing categories in `profiles/categories/`, includes like `"categories/code-quality"` resolve correctly from any profile.
+
+### Marketplace inheritance
+
+Category profiles that reference plugins from marketplaces not in `base.json` must declare their own `marketplaces` array. Base provides: `claude-plugins-official`, `claude-hud`, `superpowers-marketplace`, `thedotmack`.
+
+Categories needing additional marketplaces:
+
+- **code-quality** needs `claude-code-workflows`, `superpowers-marketplace`
+- **testing** needs `claude-code-workflows`, `claude-code-templates`
+- **security** needs `claude-code-workflows`, `cctools-plugins`
+- **productivity** needs `claude-code-workflows`
+- **migration** needs `claude-code-workflows`
+- **reference** needs `claude-code-workflows`, `anthropic-agent-skills`
+- **tooling** needs `claude-code-plugins`
+- **vcs** needs `claude-code-workflows`
+- **memory** -- covered by base marketplaces
+
 ### Category profile schema
+
+Extensions are top-level (not nested under `perScope`), matching the existing schema:
 
 ```json
 {
   "name": "code-quality",
   "description": "Code review, simplification, and style enforcement",
+  "marketplaces": [
+    { "source": "github", "repo": "wshobson/agents" },
+    { "source": "github", "repo": "obra/superpowers-marketplace" }
+  ],
   "perScope": {
-    "project": {
-      "plugins": ["..."],
-      "extensions": {
-        "skills": ["..."],
-        "rules": ["..."]
-      }
+    "user": {
+      "plugins": [
+        "code-review@claude-plugins-official",
+        "code-simplifier@claude-plugins-official",
+        "pr-review-toolkit@claude-plugins-official",
+        "feature-dev@claude-plugins-official",
+        "comprehensive-review@claude-code-workflows",
+        "code-refactoring@claude-code-workflows",
+        "codebase-cleanup@claude-code-workflows",
+        "elements-of-style@superpowers-marketplace"
+      ]
     }
+  },
+  "extensions": {
+    "skills": ["pr-comments", "pr-review-fix", "the-antislop"],
+    "rules": ["coding-standards.md", "naming-and-comments.md"]
   }
 }
 ```
@@ -253,13 +305,14 @@ Stacks use `includes` to compose categories with language/platform profiles:
 ```json
 {
   "name": "go-backend",
+  "description": "Go backend: code quality, testing, vcs, memory, reference, productivity",
   "includes": [
-    "../../category-profiles/code-quality",
-    "../../category-profiles/testing",
-    "../../category-profiles/vcs",
-    "../../category-profiles/memory",
-    "../../category-profiles/reference",
-    "../../category-profiles/productivity",
+    "categories/code-quality",
+    "categories/testing",
+    "categories/vcs",
+    "categories/memory",
+    "categories/reference",
+    "categories/productivity",
     "languages/go",
     "platforms/backend"
   ]
@@ -268,9 +321,17 @@ Stacks use `includes` to compose categories with language/platform profiles:
 
 ### CLI usage
 
-Single category: `--base-profile base --profile ../../category-profiles/code-quality`
+Single category: `--base-profile base --profile categories/code-quality`
 
 Via stack: `--base-profile base --profile stacks/go-backend`
+
+## Notable categorization decisions
+
+- **`feature-dev`** lives in code-quality only (was in both productivity and code-quality). Its skills (code-reviewer, code-explorer, code-architect) are review/analysis focused.
+- **`playwright`** lives in testing (was in productivity). Its primary use is browser-based verification.
+- **`dependency-management` and `framework-migration`** live in migration (were in productivity). They're project-scoped concerns, not general productivity.
+- **`backend-api-security`** lives in security (was in platforms/backend). Security concerns should travel with the security category, not be tied to a platform.
+- **LSPs** (gopls, pyright, swift) stay in `languages/` profiles, not in reference. They're language-specific tooling that should activate per-project via detection, not as a general reference capability.
 
 ## Plugins not categorized
 
