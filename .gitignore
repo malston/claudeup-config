@@ -27,6 +27,7 @@ worktrees/
 **/CLAUDE.md
 !.claude/CLAUDE.md
 !/CLAUDE.md
+!profiles/**/CLAUDE.md
 .claude/settings.local.json
 .claude/
 
