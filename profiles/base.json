@@ -1,29 +1,12 @@
 {
   "name": "base",
-  "description": "Foundation: marketplaces, hooks, and MCP servers",
+  "description": "Foundation: marketplaces and hooks",
   "marketplaces": [
     { "source": "github", "repo": "anthropics/claude-plugins-official" },
     { "source": "github", "repo": "jarrodwatts/claude-hud" },
     { "source": "github", "repo": "obra/superpowers-marketplace" },
     { "source": "github", "repo": "thedotmack/claude-mem" }
   ],
-  "perScope": {
-    "user": {
-      "mcpServers": [
-        {
-          "name": "context7",
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp",
-            "--api-key",
-            "ctx7sk-redacted"
-          ],
-          "scope": "user"
-        }
-      ]
-    }
-  },
   "extensions": {
     "hooks": [
       "block-dangerous-commands.sh",
