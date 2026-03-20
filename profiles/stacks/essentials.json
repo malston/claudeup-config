@@ -1,12 +1,6 @@
 {
   "name": "essentials",
   "description": "Language-agnostic core: all categories + superpowers orchestrator",
-  "marketplaces": [
-    { "source": "github", "repo": "anthropics/claude-plugins-official" },
-    { "source": "github", "repo": "jarrodwatts/claude-hud" },
-    { "source": "github", "repo": "obra/superpowers-marketplace" },
-    { "source": "github", "repo": "thedotmack/claude-mem" }
-  ],
   "includes": [
     "extensions/common",
     "categories/code-quality",
