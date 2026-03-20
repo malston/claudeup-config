@@ -1,0 +1,20 @@
+{
+  "name": "memory",
+  "description": "Persistence, vault, session continuity, and knowledge management",
+  "marketplaces": [
+    { "source": "github", "repo": "obra/superpowers-marketplace" },
+    { "source": "github", "repo": "thedotmack/claude-mem" }
+  ],
+  "perScope": {
+    "user": {
+      "plugins": [
+        "claude-mem@thedotmack",
+        "episodic-memory@superpowers-marketplace"
+      ]
+    }
+  },
+  "extensions": {
+    "skills": ["session-notes"],
+    "commands": ["update-memory.md", "recovery-prompt.md"]
+  }
+}

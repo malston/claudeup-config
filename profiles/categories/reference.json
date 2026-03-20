@@ -1,0 +1,29 @@
+{
+  "name": "reference",
+  "description": "Library docs, documentation generation, and reference skills",
+  "marketplaces": [
+    { "source": "github", "repo": "wshobson/agents" },
+    { "source": "github", "repo": "anthropics/skills" }
+  ],
+  "perScope": {
+    "user": {
+      "plugins": [
+        "document-skills@anthropic-agent-skills",
+        "code-documentation@claude-code-workflows",
+        "documentation-generation@claude-code-workflows"
+      ],
+      "mcpServers": [
+        {
+          "name": "context7",
+          "command": "npx",
+          "args": ["-y", "@upstash/context7-mcp"],
+          "scope": "user"
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "skills": ["bash", "golang", "context7-mcp", "explain-code"],
+    "rules": ["context7.md", "documentation-guidelines.md"]
+  }
+}

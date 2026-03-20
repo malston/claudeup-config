@@ -1,0 +1,26 @@
+{
+  "name": "testing",
+  "description": "TDD, verification, debugging, e2e, and performance testing",
+  "marketplaces": [
+    { "source": "github", "repo": "anthropics/claude-plugins-official" },
+    { "source": "github", "repo": "wshobson/agents" },
+    { "source": "github", "repo": "davila7/claude-code-templates" }
+  ],
+  "perScope": {
+    "project": {
+      "plugins": [
+        "playwright@claude-plugins-official",
+        "tdd-workflows@claude-code-workflows",
+        "unit-testing@claude-code-workflows",
+        "performance-testing-review@claude-code-workflows",
+        "testing-suite@claude-code-templates",
+        "debugging-toolkit@claude-code-workflows",
+        "error-debugging@claude-code-workflows"
+      ]
+    }
+  },
+  "extensions": {
+    "skills": ["playwright-skill"],
+    "agents": ["test-runner/test-runner.md"]
+  }
+}

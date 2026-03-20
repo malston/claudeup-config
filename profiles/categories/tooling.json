@@ -1,0 +1,25 @@
+{
+  "name": "tooling",
+  "description": "Claude Code configuration, plugin development, HUD, and meta-tooling",
+  "marketplaces": [
+    { "source": "github", "repo": "anthropics/claude-plugins-official" },
+    { "source": "github", "repo": "anthropics/claude-code" },
+    { "source": "github", "repo": "jarrodwatts/claude-hud" },
+    { "source": "github", "repo": "obra/superpowers-marketplace" }
+  ],
+  "perScope": {
+    "user": {
+      "plugins": [
+        "claude-hud@claude-hud",
+        "claude-code-setup@claude-plugins-official",
+        "claude-md-management@claude-plugins-official",
+        "hookify@claude-plugins-official",
+        "plugin-dev@claude-code-plugins",
+        "superpowers-developing-for-claude-code@superpowers-marketplace"
+      ]
+    }
+  },
+  "extensions": {
+    "output-styles": ["technical-evangelist.md", "thinking-jester.md"]
+  }
+}

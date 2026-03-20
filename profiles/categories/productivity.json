@@ -1,0 +1,23 @@
+{
+  "name": "productivity",
+  "description": "Orchestration, planning, parallel dispatch, and developer experience",
+  "marketplaces": [
+    { "source": "github", "repo": "obra/superpowers-marketplace" },
+    { "source": "github", "repo": "wshobson/agents" }
+  ],
+  "perScope": {
+    "user": {
+      "plugins": [
+        "superpowers@superpowers-marketplace",
+        "superpowers-lab@superpowers-marketplace",
+        "developer-essentials@claude-code-workflows",
+        "full-stack-orchestration@claude-code-workflows",
+        "team-collaboration@claude-code-workflows",
+        "shell-scripting@claude-code-workflows"
+      ]
+    }
+  },
+  "extensions": {
+    "agents": ["developer-experience"]
+  }
+}
