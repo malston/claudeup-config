@@ -1,6 +1,6 @@
 {
-  "name": "essentials",
-  "description": "Language-agnostic core: all categories + superpowers orchestrator",
+  "name": "go-backend",
+  "description": "Go backend: code quality, testing, security, vcs, memory, reference, productivity",
   "includes": [
     "extensions/common",
     "categories/code-quality",
@@ -10,7 +10,7 @@
     "categories/memory",
     "categories/reference",
     "categories/productivity",
-    "categories/tooling",
-    "orchestrators/superpowers"
+    "languages/go",
+    "platforms/backend"
   ]
 }

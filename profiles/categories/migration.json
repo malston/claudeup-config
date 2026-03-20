@@ -1,0 +1,13 @@
+{
+  "name": "migration",
+  "description": "Framework upgrades, dependency management, and legacy modernization",
+  "marketplaces": [{ "source": "github", "repo": "wshobson/agents" }],
+  "perScope": {
+    "project": {
+      "plugins": [
+        "framework-migration@claude-code-workflows",
+        "dependency-management@claude-code-workflows"
+      ]
+    }
+  }
+}

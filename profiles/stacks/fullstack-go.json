@@ -1,5 +1,5 @@
 {
   "name": "fullstack-go",
-  "description": "Go fullstack: essentials + Go, backend, frontend, testing",
-  "includes": ["essentials", "go", "backend", "frontend", "testing"]
+  "description": "Go fullstack: go-dev + backend, frontend",
+  "includes": ["stacks/go-dev", "platforms/backend", "platforms/frontend"]
 }

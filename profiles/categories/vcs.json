@@ -1,0 +1,21 @@
+{
+  "name": "vcs",
+  "description": "Git workflows, commits, PRs, and branch management",
+  "marketplaces": [
+    { "source": "github", "repo": "anthropics/claude-plugins-official" },
+    { "source": "github", "repo": "wshobson/agents" }
+  ],
+  "perScope": {
+    "user": {
+      "plugins": [
+        "commit-commands@claude-plugins-official",
+        "git-pr-workflows@claude-code-workflows",
+        "github@claude-plugins-official"
+      ]
+    }
+  },
+  "extensions": {
+    "commands": ["commit.md", "create-release.md", "make-local-issue.md"],
+    "rules": ["version-control.md"]
+  }
+}

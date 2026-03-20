@@ -1,0 +1,20 @@
+{
+  "name": "security",
+  "description": "SAST, hardening, threat modeling, auth patterns, and safety guardrails",
+  "marketplaces": [
+    { "source": "github", "repo": "anthropics/claude-plugins-official" },
+    { "source": "github", "repo": "wshobson/agents" },
+    { "source": "github", "repo": "pchalasani/claude-code-tools" }
+  ],
+  "perScope": {
+    "user": {
+      "plugins": [
+        "security-guidance@claude-plugins-official",
+        "security-compliance@claude-code-workflows",
+        "security-scanning@claude-code-workflows",
+        "backend-api-security@claude-code-workflows",
+        "safety-hooks@cctools-plugins"
+      ]
+    }
+  }
+}
