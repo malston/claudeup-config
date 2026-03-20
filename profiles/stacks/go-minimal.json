@@ -1,0 +1,13 @@
+{
+  "name": "go-minimal",
+  "description": "Go essentials: code quality, vcs, memory, reference, Go language, superpowers",
+  "includes": [
+    "extensions/common",
+    "categories/code-quality",
+    "categories/vcs",
+    "categories/memory",
+    "categories/reference",
+    "languages/go",
+    "orchestrators/superpowers"
+  ]
+}
