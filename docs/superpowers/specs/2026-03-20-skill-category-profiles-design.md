@@ -305,10 +305,12 @@ Stacks use `includes` to compose categories with language/platform profiles:
 ```json
 {
   "name": "go-backend",
-  "description": "Go backend: code quality, testing, vcs, memory, reference, productivity",
+  "description": "Go backend: code quality, testing, security, vcs, memory, reference, productivity",
   "includes": [
+    "extensions/common",
     "categories/code-quality",
     "categories/testing",
+    "categories/security",
     "categories/vcs",
     "categories/memory",
     "categories/reference",

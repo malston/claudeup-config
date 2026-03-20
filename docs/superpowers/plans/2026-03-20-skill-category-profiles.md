@@ -517,7 +517,7 @@ git commit -m "Add tooling category profile"
 
 - Modify: `profiles/extensions/common.json`
 
-The current file contains agents, commands, skills, hooks, output-styles, and rules. After this change, only hooks remain. All other extensions are now provided by category profiles.
+The current file contains agents, commands, skills, hooks, output-styles, and rules. After this change, only hooks remain. Skills, rules, commands, and output styles from common.json are redistributed to category profiles. Some category profiles also include extensions not previously in common.json (e.g., `the-antislop`, `session-notes`, `explain-code`) -- these are additions from other profiles or newly included.
 
 - [ ] **Step 1: Read the current file to confirm contents**
 
