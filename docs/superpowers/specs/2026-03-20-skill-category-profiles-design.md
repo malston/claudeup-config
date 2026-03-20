@@ -249,6 +249,8 @@ Includes resolve relative to the `profiles/` directory. Existing examples:
 
 By placing categories in `profiles/categories/`, includes like `"categories/code-quality"` resolve correctly from any profile.
 
+**Explicit paths required:** Several category profiles share `name` values with existing workflow/tools profiles (e.g., `testing`, `security`, `memory`). To avoid ambiguity in name-based resolution, all includes must use explicit directory-prefixed paths (e.g., `"workflow/testing"` not `"testing"`, `"categories/testing"` not `"testing"`). Existing stacks have been updated to follow this convention.
+
 ### Marketplace inheritance
 
 Category profiles that reference plugins from marketplaces not in `base.json` must declare their own `marketplaces` array. Base provides: `claude-plugins-official`, `claude-hud`, `superpowers-marketplace`, `thedotmack`.
