@@ -2,7 +2,7 @@
   "name": "go-backend",
   "description": "Go backend: code quality, testing, security, vcs, memory, reference, productivity",
   "includes": [
-    "extensions/common",
+    "extensions/hooks",
     "categories/code-quality",
     "categories/testing",
     "categories/security",

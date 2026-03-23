@@ -1,0 +1,13 @@
+{
+  "name": "hooks",
+  "description": "Shared hooks used across multiple profiles",
+  "extensions": {
+    "hooks": [
+      "block-dangerous-commands.sh",
+      "format-on-save.sh",
+      "log-bash-commands.sh",
+      "markdown_formatter.py",
+      "protect-sensitive-files.sh"
+    ]
+  }
+}

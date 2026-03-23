@@ -2,7 +2,7 @@
   "name": "essentials",
   "description": "Language-agnostic core: all categories + superpowers orchestrator",
   "includes": [
-    "extensions/common",
+    "extensions/shared-all",
     "categories/code-quality",
     "categories/testing",
     "categories/security",

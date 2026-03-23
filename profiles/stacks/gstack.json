@@ -1,0 +1,15 @@
+{
+  "name": "gstack",
+  "description": "Marketplaces and plugins for gstack development",
+  "includes": [
+    "extensions/shared-all",
+    "categories/memory",
+    "categories/code-quality",
+    "categories/security",
+    "categories/testing",
+    "categories/tooling",
+    "categories/vcs",
+    "languages/go",
+    "orchestrators/superpowers"
+  ]
+}
