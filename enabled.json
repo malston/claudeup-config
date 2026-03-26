@@ -184,6 +184,7 @@
     "code-reviewer": false,
     "commit-helper": false,
     "context7-mcp": true,
+    "dream": true,
     "explain-code": true,
     "frontend-web-dev": false,
     "golang": true,
