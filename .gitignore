@@ -36,3 +36,4 @@ events/
 sandboxes/
 profiles/_lab-snapshot-*.json
 backups/
+ext/skills/playwright-skill/.temp-execution-*.js
