@@ -200,6 +200,7 @@
     "security-lens": false,
     "senior-prompt-engineer": true,
     "session-notes": true,
+    "tdd-pr": true,
     "terraform": false,
     "test-driven-development": false,
     "the-antislop": true,
