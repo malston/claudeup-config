@@ -186,6 +186,7 @@
     "context7-mcp": true,
     "dream": true,
     "explain-code": true,
+    "find-docs": true,
     "frontend-web-dev": false,
     "golang": true,
     "kubernetes": false,

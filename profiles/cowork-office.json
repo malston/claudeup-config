@@ -1,0 +1,11 @@
+{
+  "name": "cowork-office",
+  "description": "Office document generation (PPTX, DOCX, XLSX, PDF) for Cowork workshop deliverables",
+  "marketplaces": [{ "source": "github", "repo": "anthropics/skills" }],
+  "perScope": {
+    "user": {
+      "plugins": ["document-skills@anthropic-agent-skills"],
+      "mcpServers": []
+    }
+  }
+}
